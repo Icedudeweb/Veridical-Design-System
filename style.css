@@ -1,0 +1,36 @@
+body {
+	font-family: 'Helvetica Neue', sans-serif;
+}
+
+/*========================================
+Typography
+==========================================*/
+
+
+/*========================================
+Header Component
+==========================================*/
+
+.site-logo {
+	background-color: #D8F5FF;
+	padding: 2rem;
+	padding-bottom: 0.75rem;
+}
+
+/*========================================
+Footer Component
+==========================================*/
+
+.footer-logo {
+	background-color: #FFFF40;
+	padding: 2rem;
+	font-size: 90%;
+}
+
+/*========================================
+Style Swatches
+==========================================*/
+
+.style-swatches {
+	margin-left: 1rem;
+}
