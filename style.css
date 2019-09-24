@@ -1,31 +1,400 @@
-body {
-	font-family: 'Helvetica Neue', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Squada+One&display=swap');
+
+/*========================================
+Colors
+==========================================*/
+
+html {
+	--color-black: #000000;
+	--color-light-black: #666666;
+	--color-super-light-black: #CCCCCC;
+
+	--color-blue: #8BA8B7;
+	--color-light-blue: #BEDBEA;
+	--color-super-light-blue: #D8F5FF;
+
+	--color-yellow: #FFFF0D;
+	--color-light-yellow: #FFFF40;
+	--color-super-light-yellow: #FFFF73;
+
+	--size-ratio: 1.2;
+	--size-six-up: calc( var(--size-five-up) * var(--size-ratio) );
+	--size-five-up: calc( var(--size-four-up) * var(--size-ratio) );
+	--size-four-up: calc( var(--size-three-up) * var(--size-ratio) );
+	--size-three-up: calc( var(--size-two-up) * var(--size-ratio) );
+	--size-two-up: calc( var(--size-one-up) * var(--size-ratio) );
+	--size-one-up: calc( 1rem * var(--size-ratio) );
+	--size-one-down: calc( 0.5rem * var(--size-ratio) );
 }
+
+
+/*========================================
+Media Queries
+==========================================*/
+
+@media( min-width: 725px ) {
+	
+	html {
+		--size-ratio: 1.3;
+	}
+
+	.headings-sample {
+		min-width: 600px;
+	}
+
+}
+
+@media( min-width: 1100px ) {
+	
+	html {
+		--size-ratio: 1.35;
+	}
+
+	.headings-sample {
+		min-width: 800px;
+	}
+
+}
+
 
 /*========================================
 Typography
 ==========================================*/
+
+html {
+	--font-body: 'Hind', sans-serif;
+    --font-head: 'Squada One', cursive;
+}
+
+
+/*========================================
+Body Component
+==========================================*/
+
+body {
+	font-family: var(--font-body);
+	min-width: 35rem;	
+}
+
+
+/*========================================
+Figure Component
+==========================================*/
+
+.large-body-uppercase {
+	font-size: 30px;
+	margin: 0;
+	margin-left: 3rem;
+	padding: 1rem;
+	text-transform: uppercase;
+	width: 375px;
+}
+
+.medium-body-uppercase {
+	font-size: 20px;
+	margin: 0;
+	margin-left: 3rem;
+	padding: 1rem;
+	text-transform: uppercase;
+	width: 375px;
+}
+
+.small-body-uppercase {
+	font-size: 15px;
+	margin: 0rem 0rem 2rem 3rem;
+	padding: 1rem;
+	text-transform: uppercase;
+	width: 375px;
+}
+
+.large-body-lowercase {
+	font-size: 30px;
+	margin: 0;
+	margin-left: 3rem;
+	padding: 1rem;
+	width: 375px;
+}
+
+.medium-body-lowercase {
+	font-size: 20px;
+	margin: 0;
+	margin-left: 3rem;
+	padding: 1rem;
+	width: 375px;
+}
+
+.small-body-lowercase {
+	font-size: 15px;
+	margin: 0;
+	margin-left: 3rem;
+	padding: 1rem;
+	width: 375px;
+}
+
+.large-headings-uppercase {
+	font-family: var(--font-head);
+	font-size: 30px;
+	margin: 0;
+	margin-left: 3rem;
+	padding: 1rem;
+	text-transform: uppercase;
+	width: 375px;
+}
+
+.medium-headings-uppercase {
+	font-family: var(--font-head);
+	font-size: 20px;
+	margin: 0;
+	margin-left: 3rem;
+	padding: 1rem;
+	text-transform: uppercase;
+	width: 375px;
+}
+
+.small-headings-uppercase {
+	font-family: var(--font-head);
+	font-size: 15px;
+	margin: 0rem 0rem 2rem 3rem;
+	padding: 1rem;
+	text-transform: uppercase;
+	width: 375px;
+}
+
+.large-headings-lowercase {
+	font-family: var(--font-head);
+	font-size: 30px;
+	margin: 0;
+	margin-left: 3rem;
+	padding: 1rem;
+	width: 375px;
+}
+
+.medium-headings-lowercase {
+	font-family: var(--font-head);
+	font-size: 20px;
+	margin: 0;
+	margin-left: 3rem;
+	padding: 1rem;
+	width: 375px;
+}
+
+.small-headings-lowercase {
+	font-family: var(--font-head);
+	font-size: 15px;
+	margin: 0;
+	margin-bottom: 3.5rem;
+	margin-left: 3rem;
+	padding: 1rem;
+	width: 375px;
+}
+
+.size-one-down {
+	font-size: var(--size-one-down);
+}
+
+.size-one-up {
+	font-size: var(--size-one-up);
+}
+
+.size-two-up {
+	font-size: var(--size-two-up);
+}
+
+.size-three-up {
+	font-size: var(--size-three-up);
+}
+
+.size-four-up {
+	font-size: var(--size-four-up);
+}
+
+.size-five-up {
+	font-size: var(--size-five-up);
+}
+
+.size-six-up {
+	font-size: var(--size-six-up);
+	margin-bottom: 4rem;
+}
+
+.ordered-list li {
+	font-family: var(--font-body);
+	font-size: var(--size-one-up);
+	display: block;
+	margin: 0;
+}
+
+.ordered-list ul {
+	font-family: var(--font-body);
+	font-size: var(--size-one-up);
+	display: block;
+	margin-bottom: 3rem;
+}
+
+.figcaption {
+	color: #424141;
+	margin: 3rem 0rem 0rem 5.5rem;
+	font-style: italic;
+}
+
+.caption p {
+	margin: 0rem 0rem 0rem 3.5rem;
+}
+
+.caption cite {
+	margin-left: 5.5rem;
+}
+
+.subdued-1 {
+	font-size: var(--size-one-down);
+	font-style: italic;
+	margin-left: 2.5rem;
+}
+
+.subdued-2 {
+	font-size: var(--size-one-down);
+	margin: 0rem 0rem 4rem 2.5rem;
+	text-decoration: underline;
+}
+
+
+
+/*========================================
+Headings and Paragraphs Component
+==========================================*/
+
+h1 {
+	font-size: var(--size-four-up);
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: var(--size-two-up);
+	margin-bottom: 0;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: var(--size-one-up);
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+h4 {
+	background-color: var(--color-light-blue);
+}
+
+h5 {
+	background-color: none;
+}
+
+h6 {
+	background-color: none;
+}
+
+.color-swatch-heading {
+	margin-left: 1.5rem;
+}
+
+.headings-sample {
+	background-color: var(--color-black);
+	color: white;
+	margin-left: 5.5rem;
+	padding: 0.25rem 0rem 0rem 1rem;
+	width: 400px;
+}
+
+.featured-text {
+	font-size: var(--size-two-up);
+	font-style: italic;
+	margin: 1rem 0rem 0rem 10rem;
+}
+
+.normal-body-copy {
+	color: #424141;
+	margin-top: 1rem;
+}
+
+p {
+	margin-left: 1rem;
+}
+
+.squanda-sample {
+	font-family: var(--font-head);
+	font-size: 1.35rem;
+}
 
 
 /*========================================
 Header Component
 ==========================================*/
 
-.site-logo {
-	background-color: #D8F5FF;
-	padding: 2rem;
-	padding-bottom: 0.75rem;
+a nav {
+	text-decoration: none;
 }
+
+a nav:active {
+	color: var(--color-light-blue);
+	background: var(--color-super-light-blue);
+	text-decoration: underline;
+}
+
+a nav:focus {
+	text-decoration: underline;
+}
+
+a nav:hover {
+	text-decoration: underline;
+}
+
+a nav:visited {
+	color: purple;
+}
+
+li {
+	display: inline-flex;
+	font-family: var(--font-head);
+	font-size: 1.25rem;
+	margin: 0.5rem 1rem 1rem 0;
+	list-style: none;
+	text-transform: uppercase; 
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+
+}
+
+.site-logo {
+	background-color: var(--color-black);
+	color: var(--color-yellow);
+	font-family: var(--font-head);
+	font-size: 2rem;
+	margin: 0rem 0rem 0rem 1rem;
+	padding: 1rem;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
 
 /*========================================
 Footer Component
 ==========================================*/
 
-.footer-logo {
-	background-color: #FFFF40;
-	padding: 2rem;
-	font-size: 90%;
+.bio {
+	margin: 0;
 }
+
+.footer-elements {
+	background-color: var(--color-light-yellow);
+	margin-top: 4rem;
+	padding: 1rem;
+	font-size: .9rem;
+}
+
 
 /*========================================
 Style Swatches
@@ -33,4 +402,8 @@ Style Swatches
 
 .style-swatches {
 	margin-left: 1rem;
+}
+
+.color-swatches {
+	margin-left: 3rem;
 }
