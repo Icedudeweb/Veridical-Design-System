@@ -74,7 +74,6 @@ Body Component
 
 body {
 	font-family: var(--font-body);
-	min-width: 35rem;	
 }
 
 
@@ -406,4 +405,106 @@ Style Swatches
 
 .color-swatches {
 	margin-left: 3rem;
+}
+
+
+/*========================================
+Button Styles
+==========================================*/
+
+.link-button-hero {
+	background-color: var(--color-black);
+	border-radius: .5rem;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	color: var(--color-yellow);
+	display: inline-block;
+	margin-right: 1rem;
+	padding: 1rem 2rem 1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.link-button-hero:hover {
+	box-shadow: 5px 5px 35px rgba(0,0,0,.5);
+}
+
+.link-button-hero:focus {
+	background-color: var(--color-blue);
+	outline: none;
+}
+
+.link-button-hero:active {
+	box-shadow: 1px 1px;
+}
+
+.link-button-normal {
+	background-color: var(--color-light-black);
+	border-radius: .5rem;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	color: var(--color-yellow);
+	display: inline-block;
+	margin-right: 1rem;
+	padding: 1rem 2rem 1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.link-button-normal:hover {
+	box-shadow: 5px 5px 35px rgba(0,0,0,.5);
+}
+
+.link-button-normal:focus {
+	background-color: var(--color-blue);
+	outline: none;
+}
+
+.link-button-normal:active {
+	box-shadow: 1px 1px;
+}
+
+.link-button-tertiary {
+	background-color: var(--color-super-light-black);
+	border-radius: .5rem;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	color: var(--color-black);
+	display: inline-block;
+	padding: 1rem 2rem 1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.link-button-tertiary:hover {
+	box-shadow: 5px 5px 35px rgba(0,0,0,.5);
+}
+
+.link-button-tertiary:focus {
+	background-color: var(--color-blue);
+	outline: none;
+}
+
+.link-button-tertiary:active {
+	box-shadow: 1px 1px;
+}
+
+
+/*========================================
+Accordions
+==========================================*/
+
+details {
+	margin: 2rem 0;
+	overflow: hidden;
+}
+
+summary {
+	margin-left: 2rem;
+	padding: 1rem;
+}
+
+summary:focus {
+	outline: none;
+}
+
+details div {
+	padding: 2rem;
 }
