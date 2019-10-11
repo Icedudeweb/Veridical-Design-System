@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind|Squada+One&display=swap');
 
 /*========================================
 Colors
@@ -26,41 +25,36 @@ html {
 	--size-two-up: calc( var(--size-one-up) * var(--size-ratio) );
 	--size-one-up: calc( 1rem * var(--size-ratio) );
 	--size-one-down: calc( 0.5rem * var(--size-ratio) );
-}
 
-
-/*========================================
-Media Queries
-==========================================*/
-
-@media( min-width: 725px ) {
-	
-	html {
-		--size-ratio: 1.3;
-	}
-
-	.headings-sample {
-		min-width: 600px;
-	}
-
-}
-
-@media( min-width: 1100px ) {
-	
-	html {
-		--size-ratio: 1.35;
-	}
-
-	.headings-sample {
-		min-width: 800px;
-	}
-
+	font-family: var(--font-body);
 }
 
 
 /*========================================
 Typography
 ==========================================*/
+
+a {
+	text-decoration: none;
+}
+
+a:active {
+	color: var(--color-light-blue);
+	background: var(--color-super-light-blue);
+	text-decoration: underline;
+}
+
+a:focus {
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: var(--color-blue);
+}
 
 html {
 	--font-body: 'Hind', sans-serif;
@@ -69,19 +63,19 @@ html {
 
 
 /*========================================
-Body Component
-==========================================*/
-
-body {
-	font-family: var(--font-body);
-}
-
-
-/*========================================
 Figure Component
 ==========================================*/
 
+.headings-sample {
+	background-color: var(--color-black);
+	color: white;
+	margin-left: 5.5rem;
+	padding: 0.25rem 0rem 0rem 1rem;
+	width: 400px;
+}
+
 .large-body-uppercase {
+	background-color: var(--color-light-blue);
 	font-size: 30px;
 	margin: 0;
 	margin-left: 3rem;
@@ -91,6 +85,7 @@ Figure Component
 }
 
 .medium-body-uppercase {
+	background-color: var(--color-light-blue);
 	font-size: 20px;
 	margin: 0;
 	margin-left: 3rem;
@@ -100,6 +95,7 @@ Figure Component
 }
 
 .small-body-uppercase {
+	background-color: var(--color-light-blue);
 	font-size: 15px;
 	margin: 0rem 0rem 2rem 3rem;
 	padding: 1rem;
@@ -108,6 +104,7 @@ Figure Component
 }
 
 .large-body-lowercase {
+	background-color: var(--color-light-blue);
 	font-size: 30px;
 	margin: 0;
 	margin-left: 3rem;
@@ -116,6 +113,7 @@ Figure Component
 }
 
 .medium-body-lowercase {
+	background-color: var(--color-light-blue);
 	font-size: 20px;
 	margin: 0;
 	margin-left: 3rem;
@@ -124,6 +122,7 @@ Figure Component
 }
 
 .small-body-lowercase {
+	background-color: var(--color-light-blue);
 	font-size: 15px;
 	margin: 0;
 	margin-left: 3rem;
@@ -132,6 +131,7 @@ Figure Component
 }
 
 .large-headings-uppercase {
+	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
 	font-size: 30px;
 	margin: 0;
@@ -142,6 +142,7 @@ Figure Component
 }
 
 .medium-headings-uppercase {
+	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
 	font-size: 20px;
 	margin: 0;
@@ -152,6 +153,7 @@ Figure Component
 }
 
 .small-headings-uppercase {
+	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
 	font-size: 15px;
 	margin: 0rem 0rem 2rem 3rem;
@@ -161,6 +163,7 @@ Figure Component
 }
 
 .large-headings-lowercase {
+	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
 	font-size: 30px;
 	margin: 0;
@@ -170,6 +173,7 @@ Figure Component
 }
 
 .medium-headings-lowercase {
+	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
 	font-size: 20px;
 	margin: 0;
@@ -179,6 +183,7 @@ Figure Component
 }
 
 .small-headings-lowercase {
+	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
 	font-size: 15px;
 	margin: 0;
@@ -245,64 +250,55 @@ Figure Component
 	margin-left: 5.5rem;
 }
 
-.subdued-1 {
+.subdued-italic {
 	font-size: var(--size-one-down);
 	font-style: italic;
 	margin-left: 2.5rem;
 }
 
-.subdued-2 {
+.subdued-underline {
 	font-size: var(--size-one-down);
 	margin: 0rem 0rem 4rem 2.5rem;
 	text-decoration: underline;
 }
 
+.squanda-sample {
+	font-family: var(--font-head);
+	font-size: 1.35rem;
+	margin-left: 1rem;
+}
 
 
 /*========================================
 Headings and Paragraphs Component
 ==========================================*/
 
-h1 {
+.h1-decorative {
 	font-size: var(--size-four-up);
+	margin-left: 1rem;
 	text-transform: uppercase;
 }
 
-h2 {
+.h2-decorative {
 	font-size: var(--size-two-up);
 	margin-bottom: 0;
 	text-decoration: underline;
 	text-transform: uppercase;
 }
 
-h3 {
+.h3-decorative {
 	font-size: var(--size-one-up);
 	font-style: italic;
+	margin-left: 1rem;
 	text-transform: uppercase;
 }
 
-h4 {
+.h4-decorative {
 	background-color: var(--color-light-blue);
 }
 
-h5 {
-	background-color: none;
-}
-
 h6 {
-	background-color: none;
-}
-
-.color-swatch-heading {
-	margin-left: 1.5rem;
-}
-
-.headings-sample {
-	background-color: var(--color-black);
-	color: white;
-	margin-left: 5.5rem;
-	padding: 0.25rem 0rem 0rem 1rem;
-	width: 400px;
+	padding-bottom: 2rem;
 }
 
 .featured-text {
@@ -311,48 +307,34 @@ h6 {
 	margin: 1rem 0rem 0rem 10rem;
 }
 
-.normal-body-copy {
-	color: #424141;
-	margin-top: 1rem;
-}
-
-p {
-	margin-left: 1rem;
-}
-
-.squanda-sample {
-	font-family: var(--font-head);
-	font-size: 1.35rem;
-}
-
 
 /*========================================
 Header Component
 ==========================================*/
 
-a nav {
+nav a {
 	text-decoration: none;
 }
 
-a nav:active {
+nav a:active {
 	color: var(--color-light-blue);
 	background: var(--color-super-light-blue);
 	text-decoration: underline;
 }
 
-a nav:focus {
+nav a:focus {
 	text-decoration: underline;
 }
 
-a nav:hover {
+nav a:hover {
 	text-decoration: underline;
 }
 
-a nav:visited {
+nav a:visited {
 	color: purple;
 }
 
-li {
+nav li {
 	display: inline-flex;
 	font-family: var(--font-head);
 	font-size: 1.25rem;
@@ -361,7 +343,7 @@ li {
 	text-transform: uppercase; 
 }
 
-ul {
+nav ul {
 	display: flex;
 	justify-content: center;
 
@@ -387,7 +369,7 @@ Footer Component
 	margin: 0;
 }
 
-.footer-elements {
+footer {
 	background-color: var(--color-light-yellow);
 	margin-top: 4rem;
 	padding: 1rem;
@@ -507,4 +489,76 @@ summary:focus {
 
 details div {
 	padding: 2rem;
+}
+
+/*========================================
+Modals
+==========================================*/
+
+dialog {
+	background-color: var(--color-yellow);
+	color: var(--color-black);
+}
+
+dialog[open] {
+	animation: fade-in 1s;
+}
+
+dialog::backdrop {
+	animation: slide-in-left 1s ease-out;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+	background-color: var(--color-yellow);
+	opacity: .25;
+}
+
+@keyframes fade-in {
+	
+	0% {
+		opacity: 0;
+		transform: scale(.1);
+	}
+	
+	60% {
+		transform: scale(1.25);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	
+}
+
+
+/*========================================
+Media Query: min-width 725px
+==========================================*/
+
+@media( min-width: 725px ) {
+	
+	html {
+		--size-ratio: 1.3;
+	}
+
+	.headings-sample {
+		min-width: 600px;
+	}
+
+}
+
+/*========================================
+Media Query: min-width 1100px
+==========================================*/
+
+@media( min-width: 1100px ) {
+	
+	html {
+		--size-ratio: 1.35;
+	}
+
+	.headings-sample {
+		min-width: 800px;
+	}
+
 }

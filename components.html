@@ -31,11 +31,11 @@
 
 	<main>
 
-		<h1>Veridical Design System Components</h1>
+		<h1 class="h1-decorative">Veridical Design System Components</h1>
 
 		<section class="style-swatches">
 
-			<h2>Link Buttons</h2>
+			<h2 class="h2-decorative">Link Buttons</h2>
 		
 			<p>The following demonstrates potential button styles and coloration.</p>
 
@@ -49,7 +49,7 @@
 
 				</figure>
 
-			<h2>Accordions</h2>
+			<h2 class="h2-decorative">Accordions</h2>
 
 			<p>The following demonstrates potential accordion styles and coloration.</p>
 
@@ -117,7 +117,25 @@
 
 				</figure>
 
-	</section>
+			<h2 class="h2-decorative">Modal Dialog</h2>
+
+			<p>The following demonstrates a potential modal dialog.</p>
+
+			<figure>
+
+				<button id="open-modal" type="button">Open Modal</button>
+
+				<dialog id="modal-demo">
+	
+					<h2>Here is a VDS modal!</h2>
+						
+					<p>Can ya dig it???</p>
+	
+				</dialog>
+
+			</figure>
+
+		</section>
 
 </main>
 
@@ -136,6 +154,25 @@
 			<p>Veridical Design System (VDS) is copyright &copy; Billy Barkhurst. All Rights Reserved.</p>
 
 	</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+const modal = document.querySelector('dialog');
+const open = document.getElementById('open-modal');
+
+open.addEventListener('click', () => {
+modal.showModal();
+});
+
+modal.addEventListener('click', event => {
+if (event.target === modal) {
+modal.close('cancelled');
+}
+});
+
+});
+</script>
 
 </body>
 
