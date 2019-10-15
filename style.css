@@ -301,6 +301,10 @@ h6 {
 	padding-bottom: 2rem;
 }
 
+.headings-indent {
+	margin-left: 1rem;
+}
+
 .featured-text {
 	font-size: var(--size-two-up);
 	font-style: italic;
@@ -528,6 +532,71 @@ dialog::backdrop {
 		transform: scale(1);
 	}
 	
+}
+
+/*========================================
+Form Inputs
+==========================================*/
+
+input, select, textarea {
+	border: 2px solid lightcoral;
+	border-color: var(--color-blue);
+	border-radius: .5rem;
+	box-sizing: border-box;
+	display: block;
+	margin-top: 1rem;
+	min-width: 50%;
+	padding: .5rem;
+	-webkit-appearance:none;
+}
+
+input:focus, select:focus, textarea:focus {
+	box-shadow: 2px 2px 0  var(--color-light-black);
+	outline: 2px;
+}
+
+input[disabled] {
+	opacity: .5;
+}
+
+.error {
+	background-color: var(--color-super-light-blue);
+}
+
+.error-message {
+	color: var(--color-light-black);
+	margin-top: 1.5rem;
+	margin-left: 2rem;
+}
+
+.form-microcopy {
+	display: block;
+}
+
+input[type="submit"] {
+	background-color: var(--color-light-blue);
+	color: var(--color-black);
+	margin-top: 1rem;
+	min-width: inherit;
+}
+
+input[type="submit"]:focus {
+	background-color: var(--color-yellow);
+	color: var(--color-black);
+	margin-top: 1rem;
+	min-width: inherit;
+}
+
+input[type="submit"]:hover {
+	background-color: var(--color-black);
+	color: var(--color-yellow);
+	cursor: pointer;
+}
+
+input[type="submit"]:active {
+	background-color: var(--color-blue);
+	color: var(--color-yellow);
+	cursor: pointer;
 }
 
 

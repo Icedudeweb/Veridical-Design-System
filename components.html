@@ -33,7 +33,7 @@
 
 		<h1 class="h1-decorative">Veridical Design System Components</h1>
 
-		<section class="style-swatches">
+		<section class="headings-indent">
 
 			<h2 class="h2-decorative">Link Buttons</h2>
 		
@@ -135,11 +135,39 @@
 
 			</figure>
 
+			<h2 class="h2-decorative">Form Inputs</h2>
+
+			<p>The following demonstrates text, textarea and select options, with a submit/button option following.</p>
+
+				<h3 class="h3-decorative">Text, Textarea and Select Inputs</h3>
+
+					<label for="title">This is a Text example:</label>
+						<small class="form-microcopy">Please enter text only, not numbers.</small>
+						<input type="title" id="title" placeholder="Please type here" required class="error">
+						<p class="error-message">Please enter text only - not numbers. Thank you.</p>
+
+					<label for="message">This is a Textarea example:</label>
+						<textarea id="message"  placeholder="Please type here" required class="error"></textarea>
+						<p class="error-message">You must leave a message. Thank you.</p>
+
+					<label for="priority">This is a Select Example:</label>
+						<select id="priority" name="message_priority">
+							<option disabled hidden selected>Choose</option>
+							<option>Choice 1</option>
+							<option>Choice 2</option>
+							<option>Choice 3</option>
+						</select>
+						<p class="error-message">You must make a selection to proceed. Thank you.</p>
+
+				<h3 class="h3-decorative">Submit/Button</h3>
+
+					<input type="submit" value="Send your message">
+
 		</section>
 
-</main>
+	</main>
 
-	<footer class="footer-elements">
+	<footer>
        
        	<p>Veridical Design System created by Billy Barkhurst. Barkhurst is a professional graphic artist and UX Designer currently in his second full semester of UX Design at ACC. His work and credentials can be found at the following:</p>
 
