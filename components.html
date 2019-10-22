@@ -18,12 +18,12 @@
         
         <a href="index.html" class="site-logo">Veridical Design System</a>
 
-       	<nav>
+       	<nav class="page-nav">
 			<ul>
-				<li><a href="">Home</a></li>
-				<li><a href="">Style</a></li>
-				<li><a href="">Components</a></li>
-				<li><a href="">Layout</a></li>
+				<li><a href="index.html" class="nav">Home</a></li>
+				<li><a href="style.html" class="nav">Style</a></li>
+				<li><a href="components.html" class="nav current-page">Components</a></li>
+				<li><a href="layouts.html" class="nav">Layouts</a></li>
 			</ul>
 		</nav>
 
@@ -137,31 +137,74 @@
 
 			<h2 class="h2-decorative">Form Inputs</h2>
 
-			<p>The following demonstrates text, textarea and select options, with a submit/button option following.</p>
+			<p>The following demonstrates text, textarea and select options, with a submit/button option following. Below each example is a sample error message.</p>
 
-				<h3 class="h3-decorative">Text, Textarea and Select Inputs</h3>
+				<figure>
 
-					<label for="title">This is a Text example:</label>
-						<small class="form-microcopy">Please enter text only, not numbers.</small>
-						<input type="title" id="title" placeholder="Please type here" required class="error">
-						<p class="error-message">Please enter text only - not numbers. Thank you.</p>
+					<h3 class="h3-decorative">Text, Textarea and Select Inputs</h3>
 
-					<label for="message">This is a Textarea example:</label>
-						<textarea id="message"  placeholder="Please type here" required class="error"></textarea>
-						<p class="error-message">You must leave a message. Thank you.</p>
+						<label for="title">This is a Text example:</label>
+							<small class="form-microcopy">Please enter text only, not numbers.</small>
+							<input type="title" id="title" placeholder="Please type here" required class="error">
+							<p class="error-message">Please enter text only - not numbers. Thank you.</p>
 
-					<label for="priority">This is a Select Example:</label>
-						<select id="priority" name="message_priority">
-							<option disabled hidden selected>Choose</option>
-							<option>Choice 1</option>
-							<option>Choice 2</option>
-							<option>Choice 3</option>
-						</select>
-						<p class="error-message">You must make a selection to proceed. Thank you.</p>
+						<label for="message">This is a Textarea example:</label>
+							<textarea id="message"  placeholder="Please type here" required class="error"></textarea>
+							<p class="error-message">You must leave a message. Thank you.</p>
 
-				<h3 class="h3-decorative">Submit/Button</h3>
+						<label for="priority">This is a Select Example:</label>
+							<select id="priority" name="message_priority">
+								<option disabled hidden selected>Choose</option>
+								<option>Choice 1</option>
+								<option>Choice 2</option>
+								<option>Choice 3</option>
+							</select>
+							<p class="error-message">You must make a selection to proceed. Thank you.</p>
 
-					<input type="submit" value="Send your message">
+					<h3 class="h3-decorative">Submit/Button</h3>
+
+						<input type="submit" value="Send your message">
+
+				</figure>
+
+
+
+
+			<h2 class="h2-decorative">Navigation</h2>
+
+				<p>The following demonstrates the primary navigation menu and the secondary vertical navigation menu. The primary menu items will stack in mobile orientation.</p>
+
+					<figure>
+
+						<h3 class="h3-decorative">Primary Navigation Menu</h3>				
+
+							<nav class="page-nav">
+								<ul>
+									<li><a href="index.html" class="nav">Home</a></li>
+									<li><a href="style.html" class="nav">Style</a></li>
+									<li><a href="components.html" class="nav current-page">Components</a></li>
+									<li><a href="layouts.html" class="nav">Layouts</a></li>
+								</ul>
+							</nav>
+
+						<h3 class="h3-decorative">Secondary Vertical Navigation Menu</h3>				
+
+							<nav>		
+								<ul>
+									<li class=vertical-navigation>Links
+										<ul>
+											<li class=vertical-navigation><a href="http://www.github.com">Github</li>
+											<li class=vertical-navigation><a href="http://www.behance.com">Behance</li>
+											<li class=vertical-navigation><a href="http://www.linkedin.com">Linkedin</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+
+
+					</figure>
+
+
 
 		</section>
 
