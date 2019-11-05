@@ -139,31 +139,31 @@
 
 			<p>The following demonstrates text, textarea and select options, with a submit/button option following. Below each example is a sample error message.</p>
 
-				<figure>
+			<figure>
 
 					<h3 class="h3-decorative">Text, Textarea and Select Inputs</h3>
 
-						<label for="title">This is a Text example:</label>
-							<small class="form-microcopy">Please enter text only, not numbers.</small>
-							<input type="title" id="title" placeholder="Please type here" required class="error">
-							<p class="error-message">Please enter text only - not numbers. Thank you.</p>
+					<label for="title">This is a Text example:</label>
+						<small class="form-microcopy">Please enter text only, not numbers.</small>
+						<input type="title" id="title" placeholder="Please type here" required class="error">
+						<p class="error-message">Please enter text only - not numbers. Thank you.</p>
 
-						<label for="message">This is a Textarea example:</label>
-							<textarea id="message"  placeholder="Please type here" required class="error"></textarea>
-							<p class="error-message">You must leave a message. Thank you.</p>
+					<label for="message">This is a Textarea example:</label>
+						<textarea id="message"  placeholder="Please type here" required class="error"></textarea>
+						<p class="error-message">You must leave a message. Thank you.</p>
 
-						<label for="priority">This is a Select Example:</label>
-							<select id="priority" name="message_priority">
-								<option disabled hidden selected>Choose</option>
-								<option>Choice 1</option>
-								<option>Choice 2</option>
-								<option>Choice 3</option>
-							</select>
-							<p class="error-message">You must make a selection to proceed. Thank you.</p>
+					<label for="priority">This is a Select Example:</label>
+						<select id="priority" name="message_priority">
+							<option disabled hidden selected>Choose</option>
+							<option>Choice 1</option>
+							<option>Choice 2</option>
+							<option>Choice 3</option>
+						</select>
+						<p class="error-message">You must make a selection to proceed. Thank you.</p>
 
 					<h3 class="h3-decorative">Submit/Button</h3>
 
-						<input type="submit" value="Send your message">
+					<input type="submit" value="Send your message">
 
 				</figure>
 
@@ -189,13 +189,13 @@
 
 						<h3 class="h3-decorative">Secondary Vertical Navigation Menu</h3>				
 
-							<nav>		
+							<nav class="vertical-navigation">		
 								<ul>
 									<li class=vertical-navigation>Links
 										<ul>
-											<li class=vertical-navigation><a href="http://www.github.com">Github</li>
-											<li class=vertical-navigation><a href="http://www.behance.com">Behance</li>
-											<li class=vertical-navigation><a href="http://www.linkedin.com">Linkedin</a></li>
+											<li><a href="http://www.github.com">Github</li>
+											<li><a href="http://www.behance.com">Behance</li>
+											<li><a href="http://www.linkedin.com">Linkedin</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -226,7 +226,7 @@
 						<h3 class="h3-decorative">Warning Notification</h3>
 
 							<div class="warning-notification">
-								<img src="images/stop_sign.png" width="50" height="45" alt="stop-sign">
+								<img src="images/stop_sign.png" width="50" height="50" alt="stop-sign">
 								<span>Warning:</span>
 								<span class="warning-message">You have unsaved work.</span>
 							</div>
@@ -253,6 +253,54 @@
 								<img src="images/smiley_face.png" width="50" height="45" alt="exclamation_point">
 								<span>Success!</span>
 								<span class="success-message">You got dis.</span>
+							</div>
+
+					</figure>
+
+			<h2 class="h2-decorative">Information Cards</h2>
+
+				<p>The following demonstrate different kinds of information cards.</p>
+
+					<figure>
+
+						<h3 class="h3-decorative">Article/Post Sample</h3>
+
+							<a href="https://www.marvel.com/characters/wolverine-james-howlett/in-comics">
+
+								<div class="card-wolverine">
+									<img src="images/wolverine.png" alt="Wolverine">
+									<h2>Wolverine</h2>
+										<p>Read all about the classic X-Men character Wolverine (seen here in his classic brown-and-tan 80's uniform upgrade)!</p>
+									<figcaption>&copy; 2019</figcaption>
+								</div>
+							</a>
+
+					</figure>
+
+					<figure>
+
+						<h3 class="h3-decorative">Person/Profile Sample</h3>
+
+							<a href="https://www.marvel.com/comics/discover/546/stan-lee">
+
+								<div class="card-person">
+									<img src="images/stan-lee.png" alt="Stan Lee">
+									<h1>Stan Lee</h1>
+									<p>Phone: 212-576-4000</p>
+									<p>E-mail: stan.lee@marvel.com</p>
+								</div>
+							</a>
+
+					</figure>
+
+					<figure>
+
+						<h3 class="h3-decorative">Call to Action</h3>
+
+							<div class="card-comic">
+								<img src="images/wolverine-number-1.png" width="100" height="150" alt="Wolverine #1">
+								<h4>Here's Your First Look Inside 'Wolverine' #1</h4>
+								<a href="https://www.marvel.com/articles/comics/here-s-your-first-look-inside-wolverine-1" class="comic-button">Go to Marvel.com</a>
 							</div>
 
 					</figure>

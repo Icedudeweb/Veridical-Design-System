@@ -345,7 +345,7 @@ Header Component
 	display: block;
 	font-family: var(--font-head);
 	font-size: 1.25rem;
-	margin: 0.5rem 1rem 1rem 0;
+	margin: .5rem 1rem 1rem 0;
 	list-style: none;
 	text-decoration: none;
 	text-transform: uppercase; 
@@ -604,36 +604,32 @@ input[disabled] {
 	display: block;
 }
 
-input[type="submit"] {
+input[type="submit"], button {
 	background-color: var(--color-light-blue);
 	color: var(--color-black);
 	margin-top: 1rem;
 	min-width: inherit;
 }
 
-input[type="submit"]:focus {
+input[type="submit"]:focus, button:focus {
 	background-color: var(--color-yellow);
 	color: var(--color-black);
 	margin-top: 1rem;
 	min-width: inherit;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, button:hover {
 	background-color: var(--color-black);
 	color: var(--color-yellow);
 	cursor: pointer;
 }
 
-input[type="submit"]:active {
+input[type="submit"]:active, button:active {
 	background-color: var(--color-blue);
 	color: var(--color-yellow);
 	cursor: pointer;
 }
 
-
-/*========================================
-Navigation
-==========================================*/
 
 /*========================================
 Notifications
@@ -676,6 +672,11 @@ Notifications
 	color: white;
 	margin: 0 0 0 .25rem;
 	text-transform: none;
+}
+
+.warning-message img {
+	align-items: baseline;
+	/*==????===*/
 }
 
 .neutral-notification {
@@ -747,6 +748,129 @@ Hero Component
 .hero-main {
 	margin: 0;
 }
+
+
+/*========================================
+Information Cards Component (Wolverine)
+==========================================*/
+
+.card-wolverine {
+	background-color: tan;
+	border: 1px solid tan;
+	border-radius: 2rem;
+	margin-bottom: 2.5rem;
+	max-width: 35rem;
+	padding: 2rem;
+	position: relative;
+}
+
+.card-wolverine img {
+	margin: auto;
+	max-width: 8rem;
+	position: absolute;
+	top: 1.5rem;
+	right: 5rem;
+}
+
+.card-wolverine h2 {
+	color: var(--color-black);
+	margin-left: 3rem;
+	text-transform: uppercase;
+}
+
+.card-wolverine p {
+	color: var(--color-black);
+	margin: 1.5rem 0 0 2rem;
+	max-width: 15rem;
+}
+
+.card-wolverine figcaption {
+	color: var(--color-black);
+	padding-top: 2rem;
+	margin-right: 1rem;
+	text-align: right;
+}
+
+
+/*========================================
+Information Cards Component (Stan Lee)
+==========================================*/
+
+.card-person {
+	background-color: var(--color-black);
+	border: 1px solid tan;
+	border-radius: 2rem;
+	margin-top: 3rem;
+	max-width: 35rem;
+	padding: 2rem;
+	position: relative;
+}
+
+.card-person img {
+	margin: auto;
+	max-width: 8rem;
+	position: absolute;
+	top: -1.5rem;
+	left: 5rem;
+}
+
+.card-person h1 {
+	color: var(--color-light-blue);
+	margin-right: 3rem;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+.card-person p {
+	color: var(--color-light-blue);
+	margin-right: 3rem;
+	text-align: right;
+}
+
+
+/*========================================
+Information Cards Component (Comic/Call to Action)
+==========================================*/
+
+.card-comic {
+	background-color: var(--color-black);
+	border: 1px solid tan;
+	border-radius: 2rem;
+	margin-bottom: 2.5rem;
+	max-width: 35rem;
+	padding: 2rem;
+	position: relative;
+}
+
+.card-comic img {
+	margin: auto;
+	max-width: 8rem;
+	position: absolute;
+	top: 2rem;
+	right: 4rem;
+}
+
+.card-comic h4 {
+	text-align: center;
+	color: var(--color-yellow);
+	margin-left: 1.5rem;
+	max-width: 15rem;
+	text-transform: uppercase;
+}
+
+.comic-button {
+	background-color: var(--color-yellow);
+	border-radius: .5rem;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	color: var(--color-black);
+	display: inline-block;
+	margin-left: 3rem;
+	padding: .75rem 1.5rem .75rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+
 
 /*========================================
 Media Query: min-width 725px
