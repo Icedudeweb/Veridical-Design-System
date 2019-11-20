@@ -24,6 +24,7 @@ html {
 	--size-three-up: calc( var(--size-two-up) * var(--size-ratio) );
 	--size-two-up: calc( var(--size-one-up) * var(--size-ratio) );
 	--size-one-up: calc( 1rem * var(--size-ratio) );
+	--size-one-half-down: calc( 0.75rem * var(--size-ratio) );
 	--size-one-down: calc( 0.5rem * var(--size-ratio) );
 
 	font-family: var(--font-body);
@@ -75,127 +76,114 @@ Figure Component
 	background-color: var(--color-black);
 	color: white;
 	margin-left: 5.5rem;
-	padding: 0.25rem 0 0 1rem;
-	width: 400px;
+	padding: .25rem 0 0 1rem;
 }
 
 .large-body-uppercase {
 	background-color: var(--color-light-blue);
-	font-size: 30px;
+	font-size: 1.85rem;
 	margin: 0;
 	margin-left: 3rem;
 	padding: 1rem;
 	text-transform: uppercase;
-	width: 375px;
 }
 
 .medium-body-uppercase {
 	background-color: var(--color-light-blue);
-	font-size: 20px;
+	font-size: 1.3rem;
 	margin: 0;
 	margin-left: 3rem;
 	padding: 1rem;
 	text-transform: uppercase;
-	width: 375px;
 }
 
 .small-body-uppercase {
 	background-color: var(--color-light-blue);
-	font-size: 15px;
+	font-size: .95rem;
 	margin: 0 0 2rem 3rem;
 	padding: 1rem;
 	text-transform: uppercase;
-	width: 375px;
 }
 
 .large-body-lowercase {
 	background-color: var(--color-light-blue);
-	font-size: 30px;
+	font-size: 1.85rem;
 	margin: 0;
 	margin-left: 3rem;
 	padding: 1rem;
-	width: 375px;
 }
 
 .medium-body-lowercase {
 	background-color: var(--color-light-blue);
-	font-size: 20px;
+	font-size: 1.3rem;
 	margin: 0;
 	margin-left: 3rem;
 	padding: 1rem;
-	width: 375px;
 }
 
 .small-body-lowercase {
 	background-color: var(--color-light-blue);
-	font-size: 15px;
+	font-size: .95rem;
 	margin: 0;
 	margin-left: 3rem;
 	padding: 1rem;
-	width: 375px;
 }
 
 .large-headings-uppercase {
 	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
-	font-size: 30px;
+	font-size: 1.85rem;
 	margin: 0;
 	margin-left: 3rem;
 	padding: 1rem;
 	text-transform: uppercase;
-	width: 375px;
 }
 
 .medium-headings-uppercase {
 	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
-	font-size: 20px;
+	font-size: 1.3rem;
 	margin: 0;
 	margin-left: 3rem;
 	padding: 1rem;
 	text-transform: uppercase;
-	width: 375px;
 }
 
 .small-headings-uppercase {
 	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
-	font-size: 15px;
+	font-size: .95rem;
 	margin: 0 0 2rem 3rem;
 	padding: 1rem;
 	text-transform: uppercase;
-	width: 375px;
 }
 
 .large-headings-lowercase {
 	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
-	font-size: 30px;
+	font-size: 1.85rem;
 	margin: 0;
 	margin-left: 3rem;
 	padding: 1rem;
-	width: 375px;
 }
 
 .medium-headings-lowercase {
 	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
-	font-size: 20px;
+	font-size: 1.3rem;
 	margin: 0;
 	margin-left: 3rem;
 	padding: 1rem;
-	width: 375px;
 }
 
 .small-headings-lowercase {
 	background-color: var(--color-light-blue);
 	font-family: var(--font-head);
-	font-size: 15px;
+	font-size: .95rem;
 	margin: 0;
 	margin-bottom: 3.5rem;
 	margin-left: 3rem;
 	padding: 1rem;
-	width: 375px;
 }
 
 .size-one-down {
@@ -357,7 +345,6 @@ Header Component
 	display: block;
 	font-family: var(--font-head);
 	font-size: 2rem;
-	margin: 0 0 0 1rem;
 	padding: 1rem;
 	text-align: center;
 	text-decoration: underline;
@@ -374,11 +361,14 @@ Header Component
 	.page-nav ul {
 		display: flex;
 		justify-content: center;
+		padding-left: 0;
+		text-align: center;
 	}
 
 	.page-nav li {
 		border-bottom: none;
 		display: block;
+		margin: .5rem;
 		text-decoration: none;
 	}
 
@@ -386,7 +376,7 @@ Header Component
 		text-decoration: underline;
 	}
 
-	.page-nav .current-page, .page-nav .current-page;visited {
+	.page-nav .current-page, .page-nav .current-page:visited {
 	color: var(--color-light-black);
 
 	}
@@ -432,7 +422,8 @@ Button Styles
 	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 	color: var(--color-yellow);
 	display: inline-block;
-	margin-right: 1rem;
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
 	padding: .75rem 1.5rem .75rem;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -440,16 +431,27 @@ Button Styles
 
 .link-button-hero:hover {
 	box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+	color: var(--color-yellow);
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
 	text-decoration: none;
 }
 
 .link-button-hero:focus {
 	background-color: var(--color-blue);
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
 	outline: none;
 }
 
 .link-button-hero:active {
 	box-shadow: 1px 1px;
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
+}
+
+.link-button-hero.splash {
+	margin: 1rem 1rem 1rem 2rem;
 }
 
 .link-button-normal {
@@ -458,7 +460,8 @@ Button Styles
 	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 	color: var(--color-yellow);
 	display: inline-block;
-	margin-right: 1rem;
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
 	padding: .75rem 1.5rem .75rem;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -466,16 +469,23 @@ Button Styles
 
 .link-button-normal:hover {
 	box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+	color: var(--color-yellow);
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
 	text-decoration: none;
 }
 
 .link-button-normal:focus {
 	background-color: var(--color-blue);
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
 	outline: none;
 }
 
 .link-button-normal:active {
 	box-shadow: 1px 1px;
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
 }
 
 .link-button-tertiary {
@@ -484,6 +494,7 @@ Button Styles
 	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 	color: var(--color-black);
 	display: inline-block;
+	min-width: inherit;
 	padding: .75rem 1.5rem .75rem;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -491,6 +502,7 @@ Button Styles
 
 .link-button-tertiary:hover {
 	box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+	color: var(--color-black);
 	text-decoration: none;
 }
 
@@ -509,8 +521,14 @@ Accordions
 ==========================================*/
 
 details {
+	background-color: var(--color-blue);
 	margin: 2rem 0;
 	overflow: hidden;
+}
+
+details p {
+	background-color: var(--color-light-yellow);
+	padding: 1rem;
 }
 
 summary {
@@ -536,15 +554,14 @@ dialog {
 }
 
 dialog[open] {
-	animation: fade-in 1s;
+	animation: fade-in .5s;
 }
 
 dialog::backdrop {
-	animation: slide-in-left 1s ease-out;
-	animation-delay: 1s;
+	animation: left 1s;
+	animation-delay: .25s;
 	animation-fill-mode: forwards;
 	background-color: var(--color-yellow);
-	opacity: .25;
 }
 
 @keyframes fade-in {
@@ -600,6 +617,42 @@ input[disabled] {
 	margin-left: 2rem;
 }
 
+.error-text {
+	color: red;
+}
+
+.input-examples {
+	margin: 3rem 0 0 1rem;
+}
+
+.form-field {
+	margin: 2rem 0 0 1rem;
+}
+
+.form-field-error {
+	border-color: red;
+	color: purple;
+	margin: 2rem 0 0 1rem;
+}
+
+.form-field-textarea {
+	background-color: var(--color-super-light-blue);
+	margin: 2rem 0 0 1rem;
+}
+
+.form-field-textarea-disabled {
+	margin: 2rem 0 0 1rem;
+}
+
+.form-message {
+	margin: .5rem 0 0 1rem;
+}
+
+.form-message-error {
+	color: red;
+	margin: .5rem 0 0 1rem;
+}
+
 .form-microcopy {
 	display: block;
 }
@@ -635,37 +688,51 @@ input[type="submit"]:active, button:active {
 Notifications
 ==========================================*/
 
-.error-notification {
-	align-items: center;
-	background-color: var(--color-yellow);
-	border-radius: 2px;
-	color: var(--color-black);
-	display: flex;
-	padding: 15px 26px;
-	position: relative;
-	text-decoration: none;
-	text-transform: uppercase;
-	width: 400px;
-}
-
 .error-message {
 	color: var(--color-black);
 	margin: 0 0 0 .25rem;
 	text-transform: none;
 }
 
-.warning-notification {
+.neutral-message {
+	color: var(--color-black);
+	margin: 0 0 0 .25rem;
+	text-transform: none;
+}
+
+.notification {
 	align-items: center;
-	background-color: coral;
 	border-radius: 2px;
-	border-color: red;
-	color: white;
+	color: var(--color-black);
 	display: flex;
-	padding: 15px 26px;
+	padding: .9rem 1.6rem;
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
-	width: 400px;
+	width: 25rem;
+}
+
+.notification.error {
+	background-color: var(--color-yellow);
+}
+
+.notification.neutral {
+	align-items: center;
+	background-color: var(--color-light-blue);
+}
+
+.notification.success {
+	background-color: lightgreen;
+}
+
+.notification.warning {
+	background-color: coral;
+}
+
+.success-message {
+	color: var(--color-black);
+	margin: 0 0 0 .25rem;
+	text-transform: none;
 }
 
 .warning-message {
@@ -676,64 +743,12 @@ Notifications
 
 .warning-message img {
 	align-items: baseline;
-	/*==????===*/
-}
-
-.neutral-notification {
-	align-items: center;
-	background-color: var(--color-light-blue);
-	border-radius: 2px;
-	color: var(--color-black);
-	display: flex;
-	padding: 15px 26px;
-	position: relative;
-	text-decoration: none;
-	text-transform: uppercase;
-	width: 400px;
-}
-
-.neutral-message {
-	color: var(--color-black);
-	margin: 0 0 0 .25rem;
-	text-transform: none;
-}
-
-.success-notification {
-	align-items: center;
-	background-color: lightgreen;
-	border-radius: 2px;
-	color: var(--color-black);
-	display: flex;
-	padding: 15px 26px;
-	position: relative;
-	text-decoration: none;
-	text-transform: uppercase;
-	width: 400px;
-}
-
-.success-message {
-	color: var(--color-black);
-	margin: 0 0 0 .25rem;
-	text-transform: none;
 }
 
 
 /*========================================
 Hero Component
 ==========================================*/
-
-.enter-button {
-	background-color: var(--color-black);
-	border-radius: .5rem;
-	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
-	color: var(--color-yellow);
-	display: inline-block;
-	margin-right: 1rem;
-	padding: .75rem 1.5rem .75rem;
-	text-decoration: none;
-	text-transform: uppercase;
-	
-}
 
 .hero {
 	background-color: var(--color-light-blue);
@@ -814,7 +829,7 @@ Information Cards Component (Stan Lee)
 	left: 5rem;
 }
 
-.card-person h1 {
+.card-person h2 {
 	color: var(--color-light-blue);
 	margin-right: 3rem;
 	text-align: right;
@@ -828,9 +843,9 @@ Information Cards Component (Stan Lee)
 }
 
 
-/*========================================
+/*================================================
 Information Cards Component (Comic/Call to Action)
-==========================================*/
+================================================*/
 
 .card-comic {
 	background-color: var(--color-black);
@@ -871,6 +886,84 @@ Information Cards Component (Comic/Call to Action)
 }
 
 
+/*========================================
+Card Grid (HTML)
+==========================================*/
+
+.card-grid-hero {
+	background-position: center;
+	background-size: cover;
+	background-image: url('images/mortal-kombat-2.png');
+	color: white;
+	min-height: 100vh;
+	margin: 0;
+	text-align: center;
+}
+
+
+/*========================================
+Card Grid (Layouts)
+==========================================*/
+
+.card-grid {
+	align-items: center;
+	display: grid;
+	grid-gap: 4rem;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 15rem 15rem;
+	margin: 2rem;
+	text-align: center;
+}
+
+.card-grid h3 {
+	margin: 1rem 0 .5rem 0;
+}
+
+.card-grid img {
+	display: block;
+	margin: 1rem auto .5rem auto;
+}
+
+.card-grid div {
+	background-color: var(--color-super-light-black);
+}
+
+
+/*========================================
+Call to Action
+==========================================*/
+
+a:hover {
+	text-decoration: none;
+}
+
+.call-to-action {
+	background-color: var(--color-light-yellow);
+	border: 1px var(--color-light-black);
+	border-radius: 2rem;
+	color: var(--color-black);
+	display: block;
+	margin: 2.5rem auto 2.5rem auto;
+	max-width: 25rem;
+	padding: 2rem;
+	position: relative;
+	text-align: center;
+}
+
+.call-to-action h2 {
+	color: var(--color-black);
+}
+
+.call-to-action img {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+.call-to-action p {
+	color: var(--color-black);
+}
+
 
 /*========================================
 Media Query: min-width 725px
@@ -901,7 +994,6 @@ Media Query: min-width 725px
 		text-decoration: underline;
 		text-transform: uppercase;
 	}
-
 }
 
 /*========================================
